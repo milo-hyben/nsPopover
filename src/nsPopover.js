@@ -172,7 +172,7 @@
             $container = $document.find('body');
           }
 
-          var $triangle;
+          var $triangle = null;
           var placement_;
           var align_;
 
@@ -235,6 +235,9 @@
             //if the element is found, then convert it to an angular element
             if($triangle.length){
               $triangle = $el($triangle);
+            } else 
+            {
+              $triangle = null; 
             }
 
             $container.append($popover);
